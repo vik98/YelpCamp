@@ -1,0 +1,32 @@
+<% include ../partials/header %>
+<div class="container">
+<header class="jumbotron">
+  <div class="container text-center">
+    <h1> Edit this new CampGround </h1>
+    <p> Fill in the required attributes </p>
+  </div>
+</header>
+<div style="margin: 0 auto; width: 30%;">
+<form action="/camp/<%= fcamp._id%>?_method=PUT" method="POST">
+  <div class="form-group">
+    <input class="form-control" type="text" name="campground[name]" value="<%= fcamp.name %>">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="number" name="campground[price]" value="<%= fcamp.price %>" min="10" step="1">
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="campground[image]" value="<%= fcamp.image %>" >
+  </div>
+  <div class="form-group">
+    <input class="form-control" type="text" name="campground[description]" value="<%= fcamp.description %>" >
+  </div>
+  <div class="form-group">
+    <button class="btn btn-default btn-lg btn-block">Submit</button>
+  </div>
+  <div class="form-group">
+    <a href="/camp" class="btn btn-primary btn-block">Go back</a>
+  </div>
+</form>
+</div>
+<% include ../partials/footer %>
+</div>
