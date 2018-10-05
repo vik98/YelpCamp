@@ -31,7 +31,7 @@ app.set("view engine", "ejs");
 app.use(flash());
 app.use(express.static("public"))
 app.use(require("express-session")({
-  secret: "Fuck all hoes",
+  secret: "Random",
   resave: false,
   saveUninitialized: false
 }));
